@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Joi</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="./assets/Joi.png">
+  </head>
+  <!-- ChatBot Script -->
+  <script>
+    (function () {
+      if (!window.chatbase || window.chatbase("getState") !== "initialized") {
+        window.chatbase = (...arguments) => {
+          if (!window.chatbase.q) {
+            window.chatbase.q = [];
+          }
+          window.chatbase.q.push(arguments);
+        };
+        window.chatbase = new Proxy(window.chatbase, {
+          get(target, prop) {
+            if (prop === "q") {
+              return target.q;
+            }
+            return (...args) => target(prop, ...args);
+          },
+        });
+      }
+      const onLoad = function () {
+        const script = document.createElement("script");
+        script.src = "https://www.chatbase.co/embed.min.js";
+        script.id = "UAfVKdOZNWNB9JjoeE_EQ";
+        script.domain = "www.chatbase.co";
+        document.body.appendChild(script);
+      };
+      if (document.readyState === "complete") {
+        onLoad();
+      } else {
+        window.addEventListener("load", onLoad);
+      }
+    })();
+  </script>
+
+  <body>
+    <main class="container">
+      <!-- Navbar -->
+      <nav class="navbar">
+        <div class="logo">joi</div>
+      </nav>
+
+      <!-- Hero Section -->
+      <section class="hero__section">
+        <img src="./assets/hero-section-bg.jpg" alt="joi" class="hero-bg" />
+
+        <img src="./assets/overlay.png" alt="overlay" / class="overlay">
+        <div class="hero__content">
+          <div class="header-text">
+            <h3>I can fix you</h3>
+            <div class="underline-center"></div>
+          </div>
+          <p class="body-text-large">
+            Powered by adaptive AI, Joi learns your moods, <br />your dreams,
+            your silences.
+          </p>
+          <p class="body-text-small">She listens. She cares. She remembers.</p>
+          <button class="btn">Learn More</button>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section class="about__section section">
+        <div class="about__content">
+          <img
+            src="./assets/chatbot-vector.png"
+            alt="chatbot-vector"
+            class="left-img"
+            style="width: 870px; max-width: 100%; height: auto; display: block"
+          />
+          <div class="right__content">
+            <div class="header-text">
+              <h2>About joi</h2>
+              <div class="underline-center"></div>
+            </div>
+            <p>
+              Joi is an AI companion designed to understand your emotions and
+              support your well-being. Even in your quiet moments, she listens,
+              remembers, and cares — helping you process feelings that may be
+              difficult to express.
+            </p>
+            <p>
+              Her purpose is to create a safe space where you can open up,
+              reflect, and feel truly heard. Whether you need guidance, comfort,
+              or simply someone to talk to, Joi is always there. She helps you
+              reduce the weight of unspoken thoughts and reminds you that you
+              are never alone on your emotional journey.
+            </p>
+            <p>✨ Concept inspired by Joi from Blade Runner 2049</p>
+            <button class="btn">See Features</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section class="features__section section">
+        <div class="header-text">
+          <h2>What joi can do for you</h2>
+          <div class="underline-center"></div>
+        </div>
+        <div class="features__cards">
+          <div class="card">
+            <img src="./assets/card1.png" alt="" class="card-img" />
+            <div class="card-text">
+              <h1>Emotional Support</h1>
+              <p>
+                Joi listens to your thoughts and helps lighten your emotional
+                load.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="./assets/card2.png" alt="" class="card-img" />
+            <div class="card-text">
+              <h1>Guidance & Comfort</h1>
+              <p>
+                Receive gentle advice and encouragement, guiding you through
+                difficult moments with care.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="./assets/card3.png" alt="" class="card-img" />
+            <div class="card-text">
+              <h1>Always There for You</h1>
+              <p>
+                Even in your quiet moments, Joi stays by your side—ready to
+                listen whenever you need her.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer Section -->
+      <footer class="footer__section">
+        <div class="footer__content">
+          <div class="left__content">
+            <div class="logo">Joi</div>
+            <p style="font-size: 1.25rem;">
+              Powered by adaptive AI, Joi learns your moods, <br>your dreams, your
+              silences.
+            </p>
+            <p style="font-size: 1.125rem;">She listens. She cares. She remembers.</p>
+          </div>
+          <div class="right__content">
+            <div class="socials">
+              <h2>Socials</h2>
+              <div class="social__links">
+                <a href="https://www.facebook.com/john.paul.cruz.231091"><img src="./assets/facebook.png" alt="facebook"></a>
+                <a href="https://www.instagram.com/p0lllly_p/"><img src="./assets/instagram.png" alt="instagram"></a>
+                <a href="https://x.com/JohnPau38567996"><img src="./assets/twitter.png" alt="twitter"></a>
+              </div>
+            </div>
+            <p>© 2025 Joi Project. Inspired by Blade Runner 2049</p>
+          </div>
+      </footer>
+    </main>
+  </body>
+  <script src="index.js"></script>
+</html>
